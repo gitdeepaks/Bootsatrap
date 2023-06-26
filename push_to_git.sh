@@ -1,3 +1,3 @@
 git add .
-git commit -m "Basics Done"
+git commit -m "New Commit"
 git push 
