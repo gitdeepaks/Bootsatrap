@@ -12,15 +12,39 @@
       <h1 class="mb-5">Popovers & Tooltips</h1>
 
       <!-- Popover -->
+      <button
+        id="popover"
+        type="button"
+        class="btn btn-lg btn-danger"
+        data-bs-toggle="popover"
+        data-bs-title="Popover title"
+        data-bs-content="This is the popover content"
+      >
+        Click to toggle popover
+      </button>
 
       <br /><br />
 
       <!-- Tooltip -->
+      <p class="muted">
+        Here are some
+        <a href="#" data-bs-toggle="tooltip" data-bs-title="Default tooltip"
+          >inline links</a
+        >
+        with tooltips. Here is
+        <a href="#" data-bs-toggle="tooltip" data-bs-title="Another tooltip"
+          >another link </a
+        >.
+      </p>
 
       <!-- Don't go past here -->
     </div>
     <div style="margin-top: 350px"></div>
 
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const popoverEl = document.getElementById("popover");
+      const popover = new bootstrap.Popover(popoverEl);
+    </script>
   </body>
 </html>
