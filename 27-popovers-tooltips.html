@@ -19,6 +19,7 @@
         data-bs-toggle="popover"
         data-bs-title="Popover title"
         data-bs-content="This is the popover content"
+        data-bs-placement="bottom"
       >
         Click to toggle popover
       </button>
@@ -45,6 +46,13 @@
     <script>
       const popoverEl = document.getElementById("popover");
       const popover = new bootstrap.Popover(popoverEl);
+
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
     </script>
   </body>
 </html>
